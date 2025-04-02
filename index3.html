@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول الدراسة المشتركة</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .nav-links a {
+            color: white;
+            background-color: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .nav-links a:hover {
+            background-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        .schedule {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .day-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .day-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .time-slot {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+        }
+        .time {
+            font-weight: bold;
+            color: var(--secondary);
+            min-width: 100px;
+        }
+        .subject {
+            flex-grow: 1;
+            text-align: left;
+        }
+        .you {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .dalal {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .notes {
+            background-color: #fff9e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 5px solid #ffcc00;
+        }
+        .notes h3 {
+            color: #d35400;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .schedule {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>جدول الدراسة المشتركة</h1>
+            <p class="subtitle">خطة أسبوعية منظمة لك ولدلال</p>
+            <div class="nav-links">
+                <a href="index1.html">الصفحة الرئيسية 1</a>
+                <a href="index2.html">الصفحة الرئيسية 2</a>
+            </div>
+        </header>
+
+        <div class="schedule">
+            <!-- السبت -->
+            <div class="day-card">
+                <h2 class="day-title">السبت</h2>
+                <div class="time-slot">
+                    <span class="time">08:00 - 09:25</span>
+                    <span class="subject"><span class="you">أنت:</span> Architecture</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">09:35 - 11:00</span>
+                    <span class="subject"><span class="dalal">دلال:</span> Algèbre 2</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">11:10 - 12:35</span>
+                    <span class="subject">حل تمارين مشتركة</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">12:45 - 14:10</span>
+                    <span class="subject">استراحة ومراجعة</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">القاعة:</span>
+                    <span class="subject">R4</span>
+                </div>
+            </div>
+
+            <!-- الأحد -->
+            <div class="day-card">
+                <h2 class="day-title">الأحد</h2>
+                <div class="time-slot">
+                    <span class="time">08:00 - 09:25</span>
+                    <span class="subject"><span class="you">أنت:</span> Analyse 1</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">09:35 - 11:00</span>
+                    <span class="subject"><span class="dalal">دلال:</span> Probabilités</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">11:10 - 12:35</span>
+                    <span class="subject">مناقشة الأسئلة الصعبة</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">القاعة:</span>
+                    <span class="subject">R2</span>
+                </div>
+            </div>
+
+            <!-- الإثنين -->
+            <div class="day-card">
+                <h2 class="day-title">الإثنين</h2>
+                <div class="time-slot">
+                    <span class="time">14:20 - 15:55</span>
+                    <span class="subject"><span class="you">أنت:</span> مراجعة فردية</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">القاعة:</span>
+                    <span class="subject">R7</span>
+                </div>
+            </div>
+
+            <!-- الثلاثاء -->
+            <div class="day-card">
+                <h2 class="day-title">الثلاثاء</h2>
+                <div class="time-slot">
+                    <span class="time">11:10 - 12:35</span>
+                    <span class="subject"><span class="dalal">دلال تشرح:</span> Logique</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">12:45 - 14:10</span>
+                    <span class="subject">تطبيق عملي</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">القاعة:</span>
+                    <span class="subject">R1</span>
+                </div>
+            </div>
+
+            <!-- الأربعاء -->
+            <div class="day-card">
+                <h2 class="day-title">الأربعاء</h2>
+                <div class="time-slot">
+                    <span class="time">09:35 - 11:00</span>
+                    <span class="subject"><span class="you">أنت:</span> Algorithmique</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">11:10 - 12:35</span>
+                    <span class="subject">حل التمارين</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">القاعة:</span>
+                    <span class="subject">R5</span>
+                </div>
+            </div>
+
+            <!-- الخميس -->
+            <div class="day-card">
+                <h2 class="day-title">الخميس</h2>
+                <div class="time-slot">
+                    <span class="time">08:00 - 09:25</span>
+                    <span class="subject">Techniques d'expression</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">القاعة:</span>
+                    <span class="subject">R3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <h3>ملاحظات هامة:</h3>
+            <ul>
+                <li>الأوقات المحددة بناءً على فراغات القاعات الرسمية</li>
+                <li>يوصى بالوصول قبل الوقت بـ 10 دقائق للتجهيز</li>
+                <li>اللون الأزرق: مواد تدرسها أنت</li>
+                <li>اللون الأحمر: مواد تدرسها دلال</li>
+                <li>يمكن تبادل الأدوار في أي وقت حسب الحاجة</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2024 جدول الدراسة المشتركة | تم التحديث في 15 يونيو 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
